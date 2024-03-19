@@ -7,19 +7,19 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
   // Draw:
   if (playerSelection === computerSelection) {
-    return console.log(`Draw! ${playerSelection} draws against ${computerSelection}`);
+    return `Draw! ${playerSelection} draws against ${computerSelection}`;
   }
   // Player win:
   else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper") {
-    return console.log(`You Win! ${playerSelection} wins against ${computerSelection}`);
+    return `You Win! ${playerSelection} wins against ${computerSelection}`;
   }
   // Player loss:
   else {
-    return console.log(`You Lose! ${playerSelection} loses against ${computerSelection}`);
+    return `You Lose! ${playerSelection} loses against ${computerSelection}`;
   }
 }
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 
-playRound(playerSelection, computerSelection);
+console.log(playRound(playerSelection, computerSelection));
